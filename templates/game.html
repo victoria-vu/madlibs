@@ -15,22 +15,47 @@
         
         <div>
         
-        <label for="color-select">Choose a color: </label>
+        <!-- <label for="color-select">Choose a color: </label>
         <select name="color" id="color-select">
             <option value="hot-pink">hot pink</option>
             <option value="neon-yellow">neon yellow</option>
             <option value="lime-green">lime green</option>
-          </select>
+          </select> -->
+        
+        What colors do you like?:
+
+        <input type="checkbox" name="color" value="hot pink" id="color1">
+        <label for="color1">hot pink</label>
+
+        <input type="checkbox" name="color" value="neon yellow" id="color2">
+        <label for="color2">neon yellow</label>
+
+        <input type="checkbox" name="color" value="sassy blue" id="color3">
+        <label for="color3">sassy blue</label>
+        
+        
+        
         </div>
 
         <div>
-            <label for="pick-noun">Choose a noun: </label>
-            <input type="text" name="noun" id="pick-noun">
+            <!-- <label for="pick-noun">Choose a noun: </label>
+            <input type="text" name="noun" id="pick-noun"> -->
+
+            <label for="noun">Put in a noun:</label>
+            <textarea name="noun" id="noun"></textarea>
+
         </div>
     
         <div>
-            <label for="select-adjective">Choose an adjective: </label>
-            <input type="text" name="adjective" id="select-adjective">
+            <!-- <label for="select-adjective">Choose an adjective: </label>
+            <input type="text" name="adjective" id="select-adjective"> -->
+            Choose an adjective:
+
+            <input type="radio" name="adjective" value="beautiful" id="beautiful-adjective">
+            <label for="beautiful-adjective">Beautiful</label>
+
+            <input type="radio" name="adjective" value="ugly" id="ugly-adjective">
+            <label for="ugly-adjective">Ugly</label>
         </div>
         
         <div>

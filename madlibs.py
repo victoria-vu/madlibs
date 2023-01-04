@@ -48,7 +48,9 @@ def greet_person():
 
     compliment = choice(AWESOMENESS)
 
-    return render_template("compliment.html", person=player, compliment=compliment)
+    return render_template("compliment.html", 
+                            person=player, 
+                            compliment=compliment)
 
 
 @app.route("/game")
@@ -60,21 +62,26 @@ def show_madlib_form():
     user_choice = request.args.get("yes-or-no")
 
     if user_choice == "yes":
-        return render_template("game.html", person=player)
+        return render_template("game.html", 
+                                person=player)
     else: 
-        return render_template("goodbye.html", person=player)    
+        return render_template("goodbye.html", 
+                                person=player)    
 
     
 @app.route("/madlib")
 def show_madlib():
     """Show user their MadLibs-style story."""
-
-    color = request.args.get("color")
+    
+    color_list = request.args.getlist("color")
     noun = request.args.get("noun")
     person = request.args.get("person")
     adjective = request.args.get("adjective")
 
-    return render_template("madlib.html", color=color, noun=noun, person=person, adjective=adjective)
+    return render_template("madlib.html", 
+                            color_list=color_list, 
+                            noun=noun, person=person, 
+                            adjective=adjective)
 
 
 if __name__ == "__main__":

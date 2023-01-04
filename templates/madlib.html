@@ -8,9 +8,15 @@
 <h1>Your MadLibs Story:</h1>
 
 <div>
-<p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-When {{ person }} went to pick it up, it burst into flames in a totally 
-{{ adjective }} way.</p>
+<p>There once was a 
+  {% if color_list %} 
+  {% for color in color_list %} 
+  {{ color }} 
+  {% endfor %} 
+  {% endif %} 
+  {{ noun }} sitting in the Hackbright Lab.
+  When {{ person }} went to pick it up, it burst into flames in a totally 
+  {{ adjective }} way.</p>
 </div>
 </body>
 </html>
